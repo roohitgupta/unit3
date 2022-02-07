@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello world</h1>
+</body>
+
+</html>
+
+<script>
+
+    let a1 = new Array(1, 2, 3);
+
+    console.log("n1:", a1);
+
+
+
+    function myArray() {
+
+        for (let i = 0; i < arguments.length; i++) {
+
+            this[i] = arguments[i]
+
+            this.length = arguments.length;
+        }
+    }
+
+
+
+    let a2 = new myArray('rohit', 'mohit', 'jerry');
+
+
+    myArray.prototype.enterData = function (x) {
+        
+        let index = this.length
+        this[index] = x
+        this.length++
+    }
+
+    myArray.prototype.exitData = function () {
+
+        let index = this.length - 1
+
+        delete this[index]
+        this.length--
+
+    }
+
+    myArray.prototype.myMap = function () {
+
+        for(let i=this.length-1; i>= 0; i--){
+            let index = this[i];
+        }
+    }
+    
+    a2.enterData('saloni');
+
+    a2.exitData()
+
+    a2.myMap()
+    
+    console.log('a2:', a2);
+
+
+
+</script>

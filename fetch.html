@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+
+
+        }
+        img{
+            width: 30%;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+</body>
+
+</html>
+
+<script>
+
+         let url = 'https://fakestoreapi.com/products'
+
+         let container = document.getElementById('container');
+
+    //     let myRequest = fetch(url);
+
+    //    // console.log('x:',myRequest);
+
+    //     myRequest
+    //     .then(function(res){
+    //        return res.json();
+    //     })
+    //     .then(function(res){
+    //         console.log('res:', res);
+    //     })
+    //     .catch(function(error){
+    //         console.log('error:',error);
+    //     });
+
+
+    async function getData() {
+        try {
+            let res = await fetch(url);
+
+            let data = await res.json();
+            appendProduct(data);
+
+
+        } catch (error) {
+            console.log('error:', error);
+        }
+    }
+
+    getData();
+
+    function appendProduct(data){
+        
+        data.forEach(function(elem){
+            console.log("elem:",elem);
+
+            let div = document.createElement('div');
+
+            let img = document.createElement('img');
+            img.src = elem.image;
+
+            let title = document.createElement('p');
+            title.innerText = elem.title;
+
+            let price = document.createElement('p');
+            price.innerText = elem.price;
+
+            let addToCart = document.createElement('button');
+
+            div.append(img, title, price, addToCart);
+
+            container.append(div);
+
+        });
+    };
+
+
+
+
+
+
+</script>

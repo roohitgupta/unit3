@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>pratice</h1>
+</body>
+</html>
+<script>
+
+    // let grandParents = {
+//     origin: 'indian',
+//     location: 'indore',
+//     profession: 'hardwork',
+//     myFather(){
+
+//         console.log(this.origin)
+//     }
+// }
+
+// let parents = Object.create(grandParents);
+
+// parents.myFather();
+
+// console.log(parents);
+// =======================================================
+// function people(n,a){
+//     this.name = n
+//     this.age = a
+
+// }
+// people.prototype.city = 'chanderi'
+
+// let morePeople = new people('rohit', 25);
+// console.log(morePeople);
+// =======================================================
+
+const grandParents = {
+
+origin:'Indian',
+skincolor:'brown',
+work:'business',
+live:'Bhopal'
+
+}
+
+const parents = Object.create(grandParents);
+parents.work = 'Job'
+parents.live = 'Chanderi'
+
+const me = Object.create(parents);
+me.work = 'student'
+me.age = '25'
+
+console.log('me:', me);
+
+console.log(me.hasOwnProperty('skincolor')) // for cheaking that what is own property or what is not.
+
+
+    
+</script>

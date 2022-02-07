@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      input,button{
+        margin: 15px;
+        padding: 25px;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <input type="text" id="url" placeholder="put the image">
+    <button onclick="storeImage()">Submit Image</button>
+    <button onclick="createSlideshow()">Create Slideshow</button>
+    
+  </body>
+
+</html>
+
+<script>
+
+  
+
+// Custom slidshow
+
+function storeImage(){
+
+let img = document.getElementById('url').value
+
+// array of object
+
+let images = localStorage.getItem('images')
+console.log('images:', images)
+
+if(images === null){
+
+    images = []
+}
+
+// there is already data in localstorages
+else{
+    images = JSON.parse(localStorage.getItem('images'));
+}
+images.push(img)
+
+
+localStorage.setItem('images', JSON.stringify(images));
+
+}
+
+function createSlideshow(){
+  window.location.href = 'slider.html';
+}
+
+</script>

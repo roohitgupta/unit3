@@ -1,0 +1,71 @@
+/* ============navbar================= */
+
+#navbar {
+    width: 100%;
+    border: 2px solid black;
+    height: 90px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(28, 41, 56);;
+    color: white;
+}
+#left {
+    width: 70%;
+}
+#right {
+    width: 30%;
+    display: flex;
+    margin: auto;
+    font-size: 25px;
+    justify-content: space-evenly;
+}
+
+#right:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* ============navbar end================= */
+
+/* ============signup form============== */
+
+#login-form-div{
+    width: 25%;
+    height: 250px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 75px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+
+}
+#login-form{
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    padding-top: 1px;
+    text-align: center;
+} 
+.input-signup{
+    width: 80%;
+    height: 30px;
+    margin-bottom: 17px;
+    border: 1px solid black;
+    font-weight: 500;
+    font-family: sans-serif;
+    border-radius: 4px;
+
+}
+#login-submit {
+    padding: 8px 50px;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: teal;
+    border: none;
+    cursor: pointer;
+    color: white;
+    
+}
+
+/* ============signup form end============== */

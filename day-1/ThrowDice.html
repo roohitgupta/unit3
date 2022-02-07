@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        #btn {
+            padding: 60px 120px;
+            font-size: 45px;
+            font-weight: 700;
+            
+
+        }
+        #number{
+            font-size: 65px;
+            padding-left: 250px;
+        }
+    </style>
+    <script>
+        function ThrowDice(num) {
+            var number = Math.floor(Math.random() * num);
+            console.log(number);
+            document.getElementById('number').innerHTML = number;
+
+            
+
+            if (number == 6) {
+                document.getElementById('number').style.background = 'green';
+            }
+            else if (number == 1) {
+                document.getElementById('number').style.background = 'yellow';
+            }
+            else {
+                document.getElementById('number').style.background = 'red';
+            }
+
+
+        }
+        console.log(ThrowDice());
+
+    </script>
+</head>
+
+<body id="body">
+
+    <div id="parent-div">
+        <button onclick="ThrowDice(7)" id="btn">Throw Button</button>
+    </div>
+
+    <p id="number">0</p>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            padding: 16px 30px;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: cursive;
+            background-color: rgb(0, 155, 155);
+            margin: 25px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        }
+        .btn:hover{
+            background-color: coral;
+            color: black;
+        }
+        #para {
+            width: 70%;
+            background-color: tomato;
+            font-size: 35px;
+            font-weight: 400;
+            margin-left: 55px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="btn">
+        <button id="object" class="btn" onclick="onClk(1)">Objects</button>
+        <button id="array" class="btn" onclick="onClk(2)">Arrays</button>
+        <button id="function" class="btn" onclick="onClk(4)">Functions</button>
+        <button id="String" class="btn" onclick="onClk(5)">Strings</button>
+        <button id="number" class="btn" onclick="onClk(6)">Numbers</button>
+        <button id="null" class="btn" onclick="onClk(7)">null</button>
+        <button id="undefined" class="btn" onclick="onClk(8)">undefined</button>
+    </div>
+    <p id="para"></p>
+</body>
+
+</html>
+<script>
+    function onClk(num) {
+        if (num == 1) {
+            document.getElementById('para').innerHTML = `<ul>
+    <li>objects are made by key-value pairs.</li>
+    <li>An object is a collection of related data.</li>
+    <li>Objects are more complex and each object may contain any
+         combination of these primitive data-types as well as reference data-types.</li>
+    <li>An object, is a reference data type. Variables that are assigned a reference
+         value are given a reference or a pointer to that value. 
+         That reference or pointer points to the location in memory where the object is stored.
+          The variables don’t actually store the value.</li>
+
+</ul>
+`
+        }
+        else if (num == 2) {
+            document.getElementById('para').innerHTML = `<ul>
+    <li>In JavaScript, array is a single variable that is used to store different elements.</li>
+    <li>There are basically two ways to declare an array.
+        <p>
+            var House = [ ]; // method 1 
+            var House = new Array(); // method 2 
+            <li>but generally method 1 is preferred.</li>
+        </p>
+    </li>
+    <li>It is a common practice to declare arrays with the const keyword.</li>
+    <li>You can also create an array, and then provide the elements.</li>
+
+</ul>`;
+        }
+        else if (num == 4) {
+            document.getElementById('para').innerHTML = `<ul>
+    <li>A JavaScript function is a block of code designed to perform a particular task.</li>
+    <li>A JavaScript function is executed when "something" invokes it (calls it).</li>
+    <li>function is defined with the function keyword, followed by a name, followed by parentheses ().</li>
+    <li>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</li>
+    <li>Function parameters are listed inside the parentheses () in the function definition.</li>
+</ul>`;
+        }
+        else if (num == 5) {
+            document.getElementById('para').innerHTML = `<ul>
+    <li>JavaScript strings are for storing and manipulating text.</li>
+    <li>A JavaScript string is zero or more characters written inside quotes.</li>
+    <li>You can use single or double quotes.</li>
+    <li>To find the length of a string, use the built-in length property.</li>
+</ul>
+`;
+        }
+        // else if(num == 6){
+        //     document.getElementById('para').innerHTML = ;
+        // }
+        // else if(num == 7){
+        //     document.getElementById('para').innerHTML = ;
+        // }
+        // else if(num == 8){
+        //     document.getElementById('para').innerHTML = ;
+        // }
+    }
+
+</script>
